@@ -1,0 +1,6 @@
+parameters:
+  $ref: './parameters/index.yaml'
+responses:
+  $ref: './responses/index.yaml'
+schemas:
+  $ref: './schemas/index.yaml'

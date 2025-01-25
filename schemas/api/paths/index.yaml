@@ -1,0 +1,10 @@
+/sample:
+  get:
+    tags:
+      - sample
+    operationId: sample
+    parameters:
+      - $ref: '#/components/parameters/q'
+    responses:
+      '200':
+        $ref: '#/components/responses/sample'

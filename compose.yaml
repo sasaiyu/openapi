@@ -1,0 +1,19 @@
+services:
+  app:
+    build: ./src
+    ports:
+      - ${APP_PORT:-8000}:${APP_PORT-8000}
+    volumes:
+      - ./schemas:/schemas
+      - ./docs/swagger.yaml:/docs/swagger.yaml
+    environment:
+      APP_PORT: ${APP_PORT-8000}
+      SWAGGER_PORT: ${SWAGGER_PORT-8001}
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    ports:
+      - ${SWAGGER_PORT:-8001}:8080
+    volumes:
+      - ./docs/swagger.yaml:/openapi.yaml
+    environment:
+      SWAGGER_JSON: /openapi.yaml

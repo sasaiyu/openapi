@@ -1,0 +1,6 @@
+sample:
+  description: ok
+  content:
+    application/json:
+      schema:
+        $ref: '#/components/schemas/response'

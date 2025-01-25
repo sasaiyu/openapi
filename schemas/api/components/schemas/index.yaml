@@ -1,0 +1,10 @@
+q:
+  type: string
+  format: string
+  example: 'search for...'
+response:
+  type: object
+  properties:
+    proverb:
+      type: string
+      example: 'What will be, will be.'

@@ -1,0 +1,14 @@
+openapi: 3.0.0
+info:
+  title: MyAPI
+  version: '1.0'
+servers:
+  - url: 'http://localhost'
+    description: My API Server
+tags:
+  - name: sample
+    description: 'this is a sample api'
+paths:
+  $ref: './paths/index.yaml'
+components:
+  $ref: './components/index.yaml'

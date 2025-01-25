@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: MyAPI
+  version: '1.0'
+servers:
+  - url: http://localhost
+    description: My API Server
+tags:
+  - name: sample
+    description: this is a sample api
+paths:
+  /sample:
+    get:
+      tags:
+        - sample
+      operationId: sample
+      parameters:
+        - $ref: '#/components/parameters/q'
+      responses:
+        '200':
+          $ref: '#/components/responses/sample'
+components:
+  parameters:
+    q:
+      name: q
+      in: query
+      required: true
+      schema:
+        $ref: '#/components/schemas/q'
+  responses:
+    sample:
+      description: ok
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/response'
+  schemas:
+    q:
+      type: string
+      format: string
+      example: search for...
+    response:
+      type: object
+      properties:
+        proverb:
+          type: string
+          example: What will be, will be.

@@ -1,0 +1,6 @@
+q:
+  name: q
+  in: query
+  required: true
+  schema:
+    $ref: '#/components/schemas/q'
